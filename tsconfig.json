@@ -1,0 +1,25 @@
+{
+    "compilerOptions": 
+    {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "es5",
+        "sourceMap": true,
+        "inlineSources": false,
+        "declaration": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": false,
+        "outDir": "./lib",
+        "removeComments": false,
+        "rootDir": ".",
+        "stripInternal": true,
+        "skipLibCheck": true,
+        "types": ["node"]
+    },
+    "files": [],
+    "exclude": [
+        "node_modules",
+        "**/index.ts"
+    ]
+}

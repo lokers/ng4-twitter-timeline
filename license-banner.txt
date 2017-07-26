@@ -1,0 +1,5 @@
+/**
+ * @license Lukasz Goslawski v1.0.0
+ * (c) 2017 Lukasz Goslawski https://github.com/lokers/ng4-twitter-timeline
+ * License: MIT
+ */

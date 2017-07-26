@@ -1,0 +1,26 @@
+{
+    "compilerOptions": 
+    {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "es5",
+        "sourceMap": true,
+        "inlineSources": false,
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "noImplicitAny": false,
+        "outDir": "./lib",
+        "stripInternal": true,
+        "skipLibCheck": true,
+        "types": ["node"]             
+    },
+    "files": [
+        "./src/index.ts",
+        "node_modules/typescript/lib/lib.es6.d.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
