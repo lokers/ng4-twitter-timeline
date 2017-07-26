@@ -1,76 +1,76 @@
 import
 {
-	AfterViewInit,
-	Component,
-	ElementRef,
-	Input,
-	OnInit
-} 								from '@angular/core';
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  OnInit
+} from '@angular/core';
 
-import { Ng4TwitterTimelineService }		from '../../services/index';
+import { Ng4TwitterTimelineService } from '../../services/index';
 
 @Component({
-	selector: 'ng4-twitter-timeline',
-	template: ``,
-	styles: [ `` ],
-	providers: []
+  selector: 'ng4-twitter-timeline',
+  template: ``,
+  styles: [ `` ],
+  providers: []
 })
 export class Ng4TwitterTimelineComponent implements OnInit, AfterViewInit
 {
-	@Input() tweetId: string;
+  @Input() screenName: string;
 
-	constructor
-	(
-		private element: ElementRef,
-		private ng4TwitterTimelineService : Ng4TwitterTimelineService
-	)
-	{
-	}
+  constructor
+  (
+    private element: ElementRef,
+    private ng4TwitterTimelineService : Ng4TwitterTimelineService
+  )
+  {
+  }
 
-	ngOnInit()
-	{
-	}
+  ngOnInit()
+  {
+  }
 
-	ngAfterViewInit()
-	{
-		//MAKE SURE TWITTER WIDGET SCRIPT IS LOADED IN HEAD...
-		this.ng4TwitterTimelineService.LoadScript().subscribe 
-		(
-			//SUCCESS, WE HAVE TWITTER WIDGETS JS FILE LOADED...
-			twttr =>
-			{
-				let nativeElement = this.element.nativeElement;
+  ngAfterViewInit()
+  {
+    //MAKE SURE TWITTER WIDGET SCRIPT IS LOADED IN HEAD...
+    this.ng4TwitterTimelineService.LoadScript().subscribe 
+    (
+      //SUCCESS, WE HAVE TWITTER WIDGETS JS FILE LOADED...
+      twttr =>
+      {
+        let nativeElement = this.element.nativeElement;
 
-				window['twttr'].widgets.createTweet(this.tweetId, nativeElement, {}).then
-				(
-					function success(embed) 
-					{
-						//console.log('Created tweet widget: ', embed);
-					} 
-				).catch
-				(
-					function creationError(message) 
-					{
-						//console.log('Could not create widget: ', message);
-					}
-				);				
-			},
+        window['twttr'].widgets.createTimeline({sourceType: 'profile', screenName: this.screenName, nativeElement, {tweetLimit: 2}).then
+        (
+          function success(embed) 
+          {
+            //console.log('Created tweet widget: ', embed);
+          } 
+        ).catch
+        (
+          function creationError(message) 
+          {
+            //console.log('Could not create widget: ', message);
+          }
+        );
+      },
 
-			//ERROR
-			err =>
-			{
-				console.log('****  ERROR LOADING TWITTER WIDGET', err);
-			},
-			
-			//COMPLETE
-			() =>
-			{
-			}			
-		);
-	}
+      //ERROR
+      err =>
+      {
+        console.log('****  ERROR LOADING TWITTER WIDGET', err);
+      },
+      
+      //COMPLETE
+      () =>
+      {
+      }
+    );
+  }
 
-	private onTwitterLoaded(twttr)
-	{
-		console.log('TWITTER LOADED YO', twttr);
-	};
+  private onTwitterLoaded(twttr)
+  {
+    console.log('TWITTER LOADED YO', twttr);
+  };
 }
