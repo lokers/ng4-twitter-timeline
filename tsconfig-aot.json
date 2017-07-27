@@ -10,10 +10,10 @@
 		"noImplicitAny": false,
 		"suppressImplicitAnyIndexErrors": true,
 		"outDir": "./lib-temp",
-        "rootDir": ".",
-        "stripInternal": true,
-        "skipLibCheck": true,
-        "types": ["node"]
+    "rootDir": ".",
+    "stripInternal": true,
+    "skipLibCheck": true,
+    "types": ["node"]
 	},
 	"files": [
 		"src/index.ts"
