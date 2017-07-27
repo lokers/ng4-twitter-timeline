@@ -17,7 +17,8 @@ import { Ng4TwitterTimelineService } from '../../services/index';
 })
 export class Ng4TwitterTimelineComponent implements OnInit, AfterViewInit
 {
-  @Input() screenName: string;
+  @Input() dataSrc: object;
+  @Input() opts: object;
 
   constructor
   (
@@ -41,7 +42,7 @@ export class Ng4TwitterTimelineComponent implements OnInit, AfterViewInit
       {
         let nativeElement = this.element.nativeElement;
 
-        window['twttr'].widgets.createTimeline({sourceType: 'profile', screenName: this.screenName}, nativeElement, {tweetLimit: 2}).then
+        window['twttr'].widgets.createTimeline(this.dataSrc, nativeElement, this.opts).then
         (
           function success(embed) 
           {
