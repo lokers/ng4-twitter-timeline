@@ -14,7 +14,7 @@
         "outDir": "./lib",
         "stripInternal": true,
         "skipLibCheck": true,
-        "types": ["node"]             
+        "types": ["node"]
     },
     "files": [
         "./src/index.ts",

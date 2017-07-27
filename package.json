@@ -38,7 +38,9 @@
     "url": "https://github.com/lokers/ng4-twitter-timeline/issues"
   },
   "homepage": "https://github.com/lokers/ng4-twitter-timeline#readme",
-  "dependencies": {},
+  "dependencies": {
+    "ngc": "^1.0.0"
+  },
   "devDependencies": {
     "@angular/common": "^2.1.2",
     "@angular/compiler": "^2.1.2",
