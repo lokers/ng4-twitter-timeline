@@ -41,7 +41,7 @@ export class Ng4TwitterTimelineComponent implements OnInit, AfterViewInit
       {
         let nativeElement = this.element.nativeElement;
 
-        window['twttr'].widgets.createTimeline({sourceType: 'profile', screenName: this.screenName, nativeElement, {tweetLimit: 2}).then
+        window['twttr'].widgets.createTimeline({sourceType: 'profile', screenName: this.screenName}, nativeElement, {tweetLimit: 2}).then
         (
           function success(embed) 
           {

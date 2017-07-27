@@ -1,10 +1,10 @@
 {
     "compilerOptions": 
     {
-        "module": "commonjs",
+        "module": "es2015",
         "moduleResolution": "node",
         "target": "es5",
-        "sourceMap": true,
+        "sourceMap": false,
         "inlineSources": false,
         "declaration": true,
         "emitDecoratorMetadata": true,
