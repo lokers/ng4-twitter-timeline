@@ -17,7 +17,7 @@
     "ngc": "ngc -p tsconfig-aot.json",
     "pree2e": "webdriver-manager update",
     "prepublish": "tsc -p ./tsconfig.publish.json",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --reporter spec",
     "tsc": "tsc",
     "tsc:w": "tsc -w"
   },
