@@ -1,5 +1,8 @@
 # ng4-twitter-timeline
 
+[![Build Status](https://travis-ci.org/lokers/ng4-twitter-timeline.svg?branch=master)](https://travis-ci.org/lokers/ng4-twitter-timeline)
+
+
 Easily embed Twitter widgets into your Angular2 application! No more having to kludge together a Twitter script loader, or manage embed state on visibility change. ng4-twitter-timeline is based on the ng2-tweet (https://github.com/SolutiaConsulting/ng2-tweet)
 
 
