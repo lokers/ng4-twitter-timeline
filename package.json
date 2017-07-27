@@ -1,6 +1,6 @@
 {
   "name": "ng4-twitter-timeline",
-  "version": "1.0.3",
+  "version": "1.0.4rc",
   "description": "Easily embed Twitter widgets into your Angular2 application! No more having to kludge together a Twitter script loader, or manage embed state on visibility change. ng4-twitter-timeline is based on the ng2-tweet (https://github.com/SolutiaConsulting/ng2-tweet)",
   "main": "./src/index.ts",
   "scripts": {
