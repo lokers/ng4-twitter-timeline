@@ -39,6 +39,7 @@
   },
   "homepage": "https://github.com/lokers/ng4-twitter-timeline#readme",
   "dependencies": {
+    "mocha": "^3.4.2",
     "ngc": "^1.0.0"
   },
   "devDependencies": {
